@@ -28,7 +28,8 @@ osm.createReadStream( 'fiji-latest.osm.pbf' )
 The easiest way to get started writing your own pipes is to use `through2`; just make sure you call `next()`.
 
 ```javascript
-var osm = require('openstreetmap-stream');
+var osm = require('openstreetmap-stream'),
+    through = require('through2');
 
 // wget http://download.geofabrik.de/australia-oceania/fiji-latest.osm.pbf
 osm.createReadStream( 'fiji-latest.osm.pbf' )
