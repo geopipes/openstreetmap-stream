@@ -20,6 +20,7 @@ module.exports.mapper.from_osmread = function(test, common) {
   test('from osmread node format', function(t) {
     var node = fixtures.osmread.node;
     var mapped = mapper( 'node', node );
+    t.equal(mapped.type, 'node', 'type set');
     t.equal(mapped.id, node.id, 'property unchanged');
     t.equal(mapped.lat, node.lat, 'property unchanged');
     t.equal(mapped.lon, node.lon, 'property unchanged');
@@ -35,11 +36,14 @@ module.exports.mapper.from_osmread = function(test, common) {
     t.equal(mapped.info.changeset, node.changeset, 'property moved');
     t.equal(mapped.info.uid, node.uid, 'property moved');
     t.equal(mapped.info.user, node.user, 'property moved');
+    var expectedProps = ['type','id','lat','lon','tags','info'];
+    t.deepEqual(expectedProps, Object.keys(mapped), 'no extra properties');
     t.end();
   });
   test('from osmread way format', function(t) {
     var way = fixtures.osmread.way;
     var mapped = mapper( 'way', way );
+    t.equal(mapped.type, 'way', 'type set');
     t.equal(mapped.id, way.id, 'property unchanged');
     t.deepEqual(mapped.tags, way.tags, 'property unchanged');
     t.equal(mapped.version, undefined, 'property removed');
@@ -55,6 +59,8 @@ module.exports.mapper.from_osmread = function(test, common) {
     t.equal(mapped.info.changeset, way.changeset, 'property moved');
     t.equal(mapped.info.uid, way.uid, 'property moved');
     t.equal(mapped.info.user, way.user, 'property moved');
+    var expectedProps = ['type','id','lat','lon','tags','info','refs'];
+    t.deepEqual(expectedProps, Object.keys(mapped), 'no extra properties');
     t.end();
   });
 }
