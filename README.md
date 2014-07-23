@@ -17,8 +17,8 @@ You can extract the openstreetmap data from a file stream:
 ```javascript
 var osm = require('openstreetmap-stream');
 
-// wget http://download.geofabrik.de/australia-oceania/fiji-latest.osm.pbf
-osm.createReadStream( 'fiji-latest.osm.pbf' )
+// wget https://s3.amazonaws.com/metro-extracts.mapzen.com/auckland.osm.pbf
+osm.createReadStream( 'auckland.osm.pbf' )
   .pipe( osm.stringify )
   .pipe( process.stdout );
 ```
@@ -31,8 +31,8 @@ The easiest way to get started writing your own pipes is to use `through2`; just
 var osm = require('openstreetmap-stream'),
     through = require('through2');
 
-// wget http://download.geofabrik.de/australia-oceania/fiji-latest.osm.pbf
-osm.createReadStream( 'fiji-latest.osm.pbf' )
+// wget https://s3.amazonaws.com/metro-extracts.mapzen.com/auckland.osm.pbf
+osm.createReadStream( 'auckland.osm.pbf' )
   .pipe( through.obj( function( data, enc, next ){
     console.log( data.type, data.id, data.lat, data.lon );
     next();
