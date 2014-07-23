@@ -1,6 +1,5 @@
 
-var Backend = require('../'),
-    mapper = require('../lib/mapper'),
+var mapper = require('../lib/mapper'),
     fixtures = {
       osmread: require('./fixtures/osmread')
     }
