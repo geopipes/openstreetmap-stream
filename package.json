@@ -1,0 +1,31 @@
+{
+  "name": "openstreetmap-stream",
+  "author": "mapzen",
+  "version": "0.0.0",
+  "description": "Streaming openstreetmap parser",
+  "homepage": "https://github.com/geopipes/openstreetmap-stream",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/geopipes/openstreetmap-stream.git"
+  },
+  "keywords": [
+    "openstreetmap",
+    "stream",
+    "parser"
+  ],
+  "bugs": {
+    "url": "https://github.com/geopipes/openstreetmap-stream/issues"
+  },
+  "engines": {
+    "node": ">=0.10.26",
+    "npm": ">=1.4.3"
+  },
+  "dependencies": {
+    "osm-read": "https://github.com/missinglink/osm-read/tarball/master"
+  }
+}
