@@ -15,8 +15,12 @@
   },
   "keywords": [
     "openstreetmap",
+    "osm",
     "stream",
-    "parser"
+    "parser",
+    "pbf",
+    "planet",
+    "openstreetmaps"
   ],
   "bugs": {
     "url": "https://github.com/geopipes/openstreetmap-stream/issues"
