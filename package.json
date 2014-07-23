@@ -1,7 +1,7 @@
 {
   "name": "openstreetmap-stream",
   "author": "mapzen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Streaming openstreetmap parser",
   "homepage": "https://github.com/geopipes/openstreetmap-stream",
   "license": "MIT",
