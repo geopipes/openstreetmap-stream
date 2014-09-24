@@ -36,4 +36,4 @@ module.exports.all = function (tape, common) {
   for( var testCase in module.exports.interface ){
     module.exports.interface[testCase](test, common);
   }
-}
+};
