@@ -99,6 +99,36 @@ Ways:
 }
 ```
 
+## Advanced Usage
+
+You can extract the openstreetmap data from an existing file stream:
+
+```javascript
+var osm = require('openstreetmap-stream'),
+    fs = require('fs');
+
+fs.createReadStream( './auckland_new-zealand.osm.pbf' )
+  .pipe( osm.parser() )
+  .pipe( osm.stringify )
+  .pipe( process.stdout );
+```
+
+You can also extract the data from stdin using a unix pipe:
+
+```javascript
+var osm = require('openstreetmap-stream');
+
+process.stdin
+  .pipe( osm.parser() )
+  .pipe( osm.stringify )
+  .pipe( process.stdout );
+```
+
+```bash
+#!/bin/bash
+cat auckland_new-zealand.osm.pbf | node stdin.js;
+```
+
 ## NPM Module
 
 The `openstreetmap-stream` npm module can be found here:

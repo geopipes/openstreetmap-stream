@@ -30,7 +30,7 @@
     "npm": ">=1.4.3"
   },
   "dependencies": {
-    "osm-read": "https://github.com/missinglink/osm-read/tarball/master",
+    "osm-pbf-parser": "^2.1.2",
     "through2": "^0.5.1"
   },
   "devDependencies": {
