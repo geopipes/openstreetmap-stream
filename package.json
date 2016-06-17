@@ -30,9 +30,9 @@
     "npm": ">=1.4.3"
   },
   "dependencies": {
-    "osm-pbf-parser": "^2.1.2",
-    "stream-combiner2": "^1.0.2",
-    "through2": "^0.5.1"
+    "osm-pbf-parser": "2.1.2",
+    "stream-combiner2": "1.0.2",
+    "through2": "0.5.1"
   },
   "devDependencies": {
     "tape": "^2.13.4",
